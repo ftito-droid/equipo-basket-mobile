@@ -2,18 +2,13 @@ import { Video } from "expo-av";
 import { useRef, useState } from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-const localVideos = {
-  "magic.mp4": require("../assets/videos/magic.mp4"),
-  "lebron.mp4": require("../assets/videos/lebron.mp4"),
-};
-
 export default function MediaScreen({ route, navigation }) {
   const { player } = route.params;
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
   const videoSource = { uri: player.video };
-  
+
   const handlePlayPause = async () => {
     if (videoRef.current) {
       if (isPlaying) {
