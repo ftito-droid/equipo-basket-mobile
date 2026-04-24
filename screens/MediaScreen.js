@@ -46,7 +46,8 @@ export default function MediaScreen({ route, navigation }) {
           source={videoSource}
           resizeMode="contain"
           shouldPlay={true}
-          style={styles.video}
+          useNativeControls
+          style={{ width: "100%", height: 250, backgroundColor: "black" }}
         />
       </View>
 
