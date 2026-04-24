@@ -12,10 +12,8 @@ export default function MediaScreen({ route, navigation }) {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
-  const videoSource = localVideos[player.video]
-    ? localVideos[player.video]
-    : { uri: player.video };
-
+  const videoSource = { uri: player.video };
+  
   const handlePlayPause = async () => {
     if (videoRef.current) {
       if (isPlaying) {
