@@ -84,12 +84,7 @@ export default function MediaScreen({ route, navigation }) {
         >
           <Text style={styles.btnText}>⬅ VOLVER</Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.navBtn}
-          onPress={() => navigation.navigate("Inicio")}
-        >
-          <Text style={styles.btnText}>🏠 INICIO</Text>
-        </TouchableOpacity>
+
       </View>
     </View>
   );
